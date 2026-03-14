@@ -1,37 +1,13 @@
-#include <stdio.h>
+# C Calculator Project
 
-int main() {
-    char operator;
-    double num1, num2;
+A simple calculator application developed in **C** as part of university coursework.
 
-    printf("Calculator Program\n");
-    printf("Choose an operation (+, -, *, /): ");
-    scanf(" %c", &operator);
+## Features
+- Performs basic arithmetic operations: +, -, *, /
+- Handles user input and division by zero errors
+- Demonstrates switch-case and if-else control structures
 
-    printf("Enter the first number: ");
-    scanf("%lf", &num1);
-    printf("Enter the second number: ");
-    scanf("%lf", &num2);
-
-    switch(operator) {
-        case '+':
-            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, num1 + num2);
-            break;
-        case '-':
-            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, num1 - num2);
-            break;
-        case '*':
-            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, num1 * num2);
-            break;
-        case '/':
-            if(num2 != 0)
-                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, num1 / num2);
-            else
-                printf("Error: Division by zero is undefined!\n");
-            break;
-        default:
-            printf("Error: Invalid operation!\n");
-    }
-
-    return 0;
-}
+## How to Run
+1. Compile the program:
+```bash
+gcc calculator.c -o calculator
